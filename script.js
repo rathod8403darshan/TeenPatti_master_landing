@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         defaults: { ease: "power3.out" }
     });
 
+
     // Initial animations
     tl.fromTo(heroSection,
         { opacity: 0 },
@@ -274,5 +275,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         );
+    }
+    const sidebar = document.querySelector('.sidebar');
+
+});
+
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.opacity = 1
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px'; // Hide sidebar
+    } else {
+        sidebar.style.left = '0'; // Show sidebar
+    }
+}
+
+document.addEventListener('click', function(event) {
+    const sidebar = document.querySelector('.sidebar');
+    const hamburger = document.querySelector('.hamburger');
+    
+    // Check if the click was outside the sidebar and hamburger button
+    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+        sidebar.style.left = '-250px'; // Close the sidebar if clicked outside
     }
 });
