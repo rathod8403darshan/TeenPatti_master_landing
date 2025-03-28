@@ -217,7 +217,8 @@ body {
     position: relative;
     overflow: hidden;
     padding: 0 1rem;
-    background: url('/images/bg.jpg');
+    /* background: url('/images/bg.jpg'); */
+    background: linear-gradient(to right, #9333ea, #3b82f6);
     background-size: cover;
     background-position: center;
 }
@@ -395,7 +396,8 @@ p {
 /* Key Features Section Styles */
 .key-features {
     padding: 5rem 0;
-    background: url('/images/bg.jpg') no-repeat;
+    /* background: url('/images/bg.jpg') no-repeat; */
+    background: linear-gradient(to right, #9333ea, #3b82f6);
     background-size: cover;
     position: relative;
     overflow: hidden;
